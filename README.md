@@ -1,6 +1,3 @@
-⚠ Note: This software is currently unmaintained since I don't have the resources or interest right now to maintain it. If you want to work on it, I could give you access to the repository, or just fork it. :-)
-
-----
 
 mpv-notify
 ==========
@@ -30,10 +27,10 @@ imagemagick`
 Installation
 ------------
 
-Just drop `notify.lua` into the folder `~/.mpv/lua` (create it when neccessary),
+Just drop `notify.lua` into the folder `~/.mpv/scripts` (create it when neccessary),
 and mpv will find it. Optionally, you can add it to mpv's command line:
 
-    mpv --lua=/path/to/notify.lua <files and options>
+    mpv --script=/path/to/notify.lua <files and options>
 
 License
 -------
