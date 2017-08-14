@@ -177,7 +177,9 @@ function fetch_musicbrainz_cover_art(artist, album, mbid)
 			"<%s*release%s+[^>]*id%s*=%s*['\"]%s*([0-9a-fA-F-]+)%s*['\"]")
 		if not mbid or not valid_mbid(mbid) then
 			print("MusicBrainz returned no match.")
-			print_debug("content: " .. d)
+			if not d then
+                print_debug("content: " .. d)
+            end
 			return nil
 		end
 	end
