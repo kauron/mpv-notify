@@ -254,8 +254,8 @@ function notify_current_track()
 	local cover_image = get_folder_cover_art(abs_filename)
 	if cover_image and cover_image ~= "" then
 		scaled_image = tmpname()
-		scale_image(cover_image, scaled_image)
-		delete_scaled_image = true
+        scale_image(cover_image, scaled_image)
+		delete_scaled_image = false
 	end
 
 	-- then load cover art from the internet
@@ -303,4 +303,4 @@ end
 -- insert main() here
 
 mp.register_event("file-loaded", notify_current_track)
-mp.observe_property("metadata", nil, notify_metadata_updated)
+-- mp.observe_property("metadata", nil, notify_metadata_updated)
